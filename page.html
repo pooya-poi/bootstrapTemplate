@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Product page</title>
+
+	<!-- ********************** Roboto Font *********************************** -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+	<!-- ********************** Bootstrap *********************************** -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+		integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+	<!-- ********************** Fontawesom *********************************** -->
+	<link rel="stylesheet" href="./font-awesome.min.css">
+
+	<!-- ********************** Custom Styles *********************************** -->
+	<link rel="stylesheet" href="./style.css">
+
+	<!-- ********************** Swiper css *********************************** -->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+	<!-- ********************** Swiper js *********************************** -->
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<style>
+		.swiper-container {
+			width: 100%;
+			height: 300px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.swiper-slide {
+			background-size: cover;
+			background-position: center;
+		}
+
+		.gallery-top {
+			height: 80%;
+			width: 100%;
+		}
+
+		.gallery-thumbs {
+			height: 20%;
+			box-sizing: border-box;
+			padding: 10px 0;
+		}
+
+		.gallery-thumbs .swiper-slide {
+			height: 100%;
+			opacity: 0.4;
+		}
+
+		.gallery-thumbs .swiper-slide-thumb-active {
+			opacity: 1;
+			/* border: 2px solid red; */
+		}
+
+		/****
+		 Second Swier slider  
+		 ****/
+
+		.swiper-container.second-swiper {
+			width: 100%;
+			height: 100%;
+		}
+
+		.swiper-slide.second-swiper {
+			text-align: center;
+			font-size: 18px;
+			background: #fff;
+
+			/* Center slide text vertically */
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- sidenav for responsive mod -->
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Clients</a>
+		<a href="#">Contact</a>
+	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-light  bg-dark">
+		<div class="container">
+			<button onclick="openNav()" class="navbar-toggler bg-light" type="button" data-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon "></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav nav justify-content-end">
+					<li class="nav-item active ">
+						<a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#">Features</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-white" href="#">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled text-white" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+			</div>
+			<a class="navbar-brand" href="#"><img src="./images/logo.png" alt=""></a>
+		</div>
+	</nav>
+
+	<!-- product image slider and info -->
+	<div class="bg-white">
+		<div class="container">
+			<div class="row mt-5 car-info">
+				<!-- product info and price -->
+				<div id="detail" class="col-sm-12 col-xs-12 col-md-6 mt-5 ">
+					<h3>BMW</h3>
+					<ul>
+						<li class="d-flex justify-content-between mb-3 align-items-center">Odometer: <div class="div">
+								37,192 KM
+							</div>
+						</li>
+						<li class="d-flex justify-content-between mb-3 align-items-center">Type: <div class="div">
+								Sport
+							</div>
+						</li>
+						<li class="d-flex justify-content-between mb-3 align-items-center">Model: <div class="div">
+								2018
+							</div>
+						</li>
+						<li class="d-flex justify-content-between mb-3 align-items-center">Color: <div class="div">
+								Blue
+							</div>
+						</li>
+						<li class="d-flex justify-content-between mb-3 align-items-center">Manufactor: <div class="div">
+								BMW
+							</div>
+						</li>
+						<li class="d-flex justify-content-between mb-3 mt-5 align-items-center font-weight-bold">price:
+							<div class="div text-danger">$100,000,000
+							</div>
+						</li>
+					</ul>
+
+				</div>
+				<!-- swiper: Product image -->
+				<div class="col-sm-12 col-xs-12 col-md-6 pt-5  ">
+
+
+					<!-- Swiper -->
+					<div class="swiper-container gallery-top">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" style="background-image:url(./images/1.png)"></div>
+							<div class="swiper-slide" style="background-image:url(./images/2.jpg)"></div>
+							<div class="swiper-slide" style="background-image:url(./images/3.jpg)"></div>
+							<div class="swiper-slide" style="background-image:url(./images/5.jpg)"></div>
+
+						</div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next swiper-button-white"></div>
+						<div class="swiper-button-prev swiper-button-white"></div>
+					</div>
+					<div class="swiper-container gallery-thumbs">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" style="background-image:url(./images/1.png)"></div>
+							<div class="swiper-slide" style="background-image:url(./images/2.jpg)"></div>
+							<div class="swiper-slide" style="background-image:url(./images/3.jpg)"></div>
+							<div class="swiper-slide" style="background-image:url(./images/5.jpg)"></div>
+
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class=" mt-5 mb-5 bg-white">
+
+
+		<ul class="nav nav-pills nav-fill mb-3 text-dark" id="pills-tab" role="tablist">
+
+			<li class="nav-item " role="presentation"> <a class="nav-link active  " id="pills-review-tab"
+					data-toggle="pill" href="#pills-review" role="tab" aria-controls="pills-review"
+					aria-selected="true">Review</a> </li>
+			<li class="nav-item" role="presentation"> <a class="nav-link" id="pills-Technical-tab" data-toggle="pill"
+					href="#pills-Technical" role="tab" aria-controls="pills-Technical" aria-selected="false">Technical
+					info</a> </li>
+			<li class="nav-item" role="presentation"> <a class="nav-link" id="pills-Chart-tab" data-toggle="pill"
+					href="#pills-Chart" role="tab" aria-controls="pills-Chart" aria-selected="false">Price Chart</a>
+			</li>
+
+		</ul>
+		<div class="container">
+			<div class="tab-content mt-5" id="pills-tabContent">
+				<!-- Explanation and review of the car -->
+				<div class="tab-pane fade show active " id="pills-review" role="tabpanel"
+					aria-labelledby="pills-review-tab">
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas amet, ea impedit deleniti id
+						sapiente adipisci reprehenderit est sunt, libero ab at sint tempore, placeat magnam error
+						dolorem?
+						Vel, nam.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas odio facilis ad itaque mollitia
+						assumenda cum veritatis vero beatae sequi aut necessitatibus, fugiat accusantium quae ipsam nam
+						quo
+						excepturi, amet dolor esse ex ratione maxime magni. Commodi ex voluptas, minima aspernatur
+						explicabo
+						ipsa earum reiciendis, est quos veritatis voluptatibus esse accusantium voluptatem veniam
+						ducimus,
+						neque nesciunt repudiandae minus ullam! Reiciendis, molestias ut nobis voluptas, repellendus
+						laboriosam sapiente repellat vero ipsam nulla vitae enim, vel eaque aliquid soluta cum similique
+						accusantium totam quia at. Laboriosam molestiae, mollitia saepe laborum suscipit, cupiditate a
+						accusamus aperiam sint laudantium illum veritatis amet et possimus?
+						sapiente adipisci reprehenderit est sunt, libero ab at sint tempore, placeat magnam error
+						dolorem?
+						Vel, nam.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas odio facilis ad itaque mollitia
+						assumenda cum veritatis vero beatae sequi aut necessitatibus, fugiat accusantium quae ipsam nam
+						quo
+						excepturi, amet dolor esse ex ratione maxime magni. Commodi ex voluptas, minima aspernatur
+						explicabo
+						ipsa earum reiciendis, est quos veritatis voluptatibus esse accusantium voluptatem veniam
+						ducimus,
+						neque nesciunt repudiandae minus ullam! Reiciendis, molestias ut nobis voluptas, repellendus
+						laboriosam sapiente repellat vero ipsam nulla vitae enim, vel eaque aliquid soluta cum similique
+						accusantium totam quia at. Laboriosam molestiae, mollitia saepe laborum suscipit, cupiditate a
+						accusamus aperiam sint laudantium illum veritatis amet et possimus?
+						sapiente adipisci reprehenderit est sunt, libero ab at sint tempore, placeat magnam error
+						dolorem?
+
+					</p>
+				</div>
+				<!-- Technical Specifications -->
+				<div class="tab-pane fade" id="pills-Technical" role="tabpanel" aria-labelledby="pills-Technical-tab">
+					<ul class="list-unstyled">
+						<li id="tecnical-info" class="d-flex">
+							<div class="mr-2 bg-gray w-40"><img class="mr-1" width="24"
+									src="./images/icons/speed.png">Top
+								speed</div>
+							<div class="mr-2 bg-gray w-60">350 km/h</div>
+						</li>
+						<li id="tecnical-info" class="d-flex">
+							<div class="mr-2 bg-gray w-40"><img class="mr-1" width="24"
+									src="./images/icons/seats.png">Seats
+							</div>
+							<div class="mr-2 bg-gray w-60">4</div>
+						</li>
+						<li id="tecnical-info" class="d-flex">
+							<div class="mr-2 bg-gray w-40"><img class="mr-1" width="24"
+									src="./images/icons/navigate.png">Navigation</div>
+							<div class="mr-2 bg-gray w-60">Yes</div>
+						</li>
+						<li id="tecnical-info" class="d-flex">
+							<div class="mr-2 bg-gray w-40"><img class="mr-1" width="24"
+									src="./images/icons/brake.png">Brakes</div>
+							<div class="mr-2 bg-gray w-60">Disk</div>
+						</li>
+						<li id="tecnical-info" class="d-flex">
+							<div class="mr-2 bg-gray w-40"><img class="mr-1" width="24"
+									src="./images/icons/Parking.png">Auto Park</div>
+							<div class="mr-2 bg-gray w-60">No</div>
+						</li>
+						<li id="tecnical-info" class="d-flex">
+							<div class="mr-2 bg-gray w-40"><img class="mr-1" width="24"
+									src="./images/icons/gearbox.png">GearBox</div>
+							<div class="mr-2 bg-gray w-60">Manual/6</div>
+						</li>
+						<li id="tecnical-info" class="d-flex">
+							<div class="mr-2 bg-gray w-40"><img class="mr-1" width="24"
+									src="./images/icons/headlight.png">Headlights</div>
+							<div class="mr-2 bg-gray w-60">Neon-Anti Fog</div>
+						</li>
+						<li id="tecnical-info" class="d-flex">
+							<div class="mr-2 bg-gray w-40"><img class="mr-1" width="24"
+									src="./images/icons/remote.png">Remote</div>
+							<div class="mr-2 bg-gray w-60">Touch Remote</div>
+						</li>
+					</ul>
+
+				</div>
+				<!-- Price Chart -->
+				<div class="tab-pane fade " id="pills-Chart" role="tabpanel" aria-labelledby="pills-Chart-tab">
+
+
+					<canvas id="myChart"></canvas>
+
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- More like this car suggestion -->
+	<div class="bg-white pt-1 pb-5 mb-5">
+		<div class="container">
+			<span class="dot ml-2"></span>
+			<h4 class="text-left ml-4 mt-5">More car like this</h4>
+			<div class="row ">
+				<div class="swiper-container second-swiper-container pr-3 pl-3">
+					<div class="swiper-wrapper second-swiper ">
+						<div class="swiper-slide second-swiper mb-5">
+							<div class="card mb-4  ">
+								<img src="./images/2.jpg" class="card-img-top" alt="">
+								<div class="card-body" id="card-body">
+									<h4>TOYOTA <small class="text-secondary">(red)</small></h4>
+									<ul class="d-flex list-unstyled car-detaile">
+										<li class="">Toyota</li>
+										<li class="">sedan</li>
+										<li class="">2008</li>
+										<li class="text-danger"><span class="text-dark">$</span>100,000</li>
+									</ul>
+									<div class="read-more text-center">
+										<a class="btn btn-danger btn-block ">more detail</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide second-swiper">
+							<div class="card mb-4  ">
+								<img src="./images/2.jpg" class="card-img-top" alt="">
+								<div class="card-body" id="card-body">
+									<h4>TOYOTA <small class="text-secondary">(red)</small></h4>
+									<ul class="d-flex list-unstyled car-detaile">
+										<li class="">Toyota</li>
+										<li class="">sedan</li>
+										<li class="">2008</li>
+										<li class="text-danger"><span class="text-dark">$</span>100,000</li>
+									</ul>
+									<div class="read-more text-center">
+										<a class="btn btn-danger btn-block ">more detail</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide second-swiper">
+							<div class="card mb-4  ">
+								<img src="./images/2.jpg" class="card-img-top" alt="">
+								<div class="card-body" id="card-body">
+									<h4>TOYOTA <small class="text-secondary">(red)</small></h4>
+									<ul class="d-flex list-unstyled car-detaile">
+										<li class="">Toyota</li>
+										<li class="">sedan</li>
+										<li class="">2008</li>
+										<li class="text-danger"><span class="text-dark">$</span>100,000</li>
+									</ul>
+									<div class="read-more text-center">
+										<a class="btn btn-danger btn-block ">more detail</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide second-swiper">
+							<div class="card mb-4  ">
+								<img src="./images/2.jpg" class="card-img-top" alt="">
+								<div class="card-body" id="card-body">
+									<h4>TOYOTA <small class="text-secondary">(red)</small></h4>
+									<ul class="d-flex list-unstyled car-detaile">
+										<li class="">Toyota</li>
+										<li class="">sedan</li>
+										<li class="">2008</li>
+										<li class="text-danger"><span class="text-dark">$</span>100,000</li>
+									</ul>
+									<div class="read-more text-center">
+										<a class="btn btn-danger btn-block ">more detail</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide second-swiper">
+							<div class="card mb-4  ">
+								<img src="./images/2.jpg" class="card-img-top" alt="">
+								<div class="card-body" id="card-body">
+									<h4>TOYOTA <small class="text-secondary">(red)</small></h4>
+									<ul class="d-flex list-unstyled car-detaile">
+										<li class="">Toyota</li>
+										<li class="">sedan</li>
+										<li class="">2008</li>
+										<li class="text-danger"><span class="text-dark">$</span>100,000</li>
+									</ul>
+									<div class="read-more text-center">
+										<a class="btn btn-danger btn-block ">more detail</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide second-swiper">
+							<div class="card mb-4  ">
+								<img src="./images/2.jpg" class="card-img-top" alt="">
+								<div class="card-body" id="card-body">
+									<h4>TOYOTA <small class="text-secondary">(red)</small></h4>
+									<ul class="d-flex list-unstyled car-detaile">
+										<li class="">Toyota</li>
+										<li class="">sedan</li>
+										<li class="">2008</li>
+										<li class="text-danger"><span class="text-dark">$</span>100,000</li>
+									</ul>
+									<div class="read-more text-center">
+										<a class="btn btn-danger btn-block ">more detail</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide second-swiper">
+							<div class="card mb-4  ">
+								<img src="./images/2.jpg" class="card-img-top" alt="">
+								<div class="card-body" id="card-body">
+									<h4>TOYOTA <small class="text-secondary">(red)</small></h4>
+									<ul class="d-flex list-unstyled car-detaile">
+										<li class="">Toyota</li>
+										<li class="">sedan</li>
+										<li class="">2008</li>
+										<li class="text-danger"><span class="text-dark">$</span>100,000</li>
+									</ul>
+									<div class="read-more text-center">
+										<a class="btn btn-danger btn-block ">more detail</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Add Arrows -->
+
+					<!-- <div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div> -->
+
+					<!-- Add Pagination -->
+					<div class="swiper-pagination second-swiper-pagination mt-5 pt-5"></div>
+
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<footer class="pt-4  pt-md-5 border-top bg-dark">
+		<div class="bg-dark">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md">
+						<img class="mb-2" src="./images/footerlogo.png" alt="" width="100" height="100">
+						<small class="d-block mb-3 text-muted">&copy; 2020-2021</small>
+					</div>
+					<div class="col-6 col-md text-white wow animate__fadeInLeft">
+						<span class="dot ml-2"></span>
+						<h5 class="ml-4">Features</h5>
+						<ul class="list-unstyled text-small ml-4">
+							<li><a class="text-white" href="#">Cool Feature</a></li>
+							<li><a class="text-white" href="#">Random Feature</a></li>
+							<li><a class="text-white" href="#">Team Feature</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md text-white">
+						<span class="dot ml-2"></span>
+						<h5 class="ml-4">Resources</h5>
+						<ul class="list-unstyled text-small ml-4">
+							<li><a class="text-white" href="#">Menu One</a></li>
+							<li><a class="text-white" href="#">Menu Two</a></li>
+							<li><a class="text-white" href="#">Menu Three</a></li>
+							<li><a class="text-white" href="#">Menu Four</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md text-white">
+						<span class="dot ml-2"></span>
+						<h5 class="ml-4">About</h5>
+						<p class="ml-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam, natus.</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer class="bg-danger">
+		<div class="container text-center text-white p-2">
+			&copy;pooya
+		</div>
+	</footer>
+
+	<!-- ***************************	jQuery	********************************* -->
+	<script src="./js/jquery.min.js"></script>
+	<!-- ***************************	Bootstrap	********************************* -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+	</script>
+	<!-- ***************************	chartjs	********************************* -->
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+	<!-- ***************************	Custom scripts	********************************* -->
+	<script src="./js/page.js"></script>
+</body>
+
+</html>
